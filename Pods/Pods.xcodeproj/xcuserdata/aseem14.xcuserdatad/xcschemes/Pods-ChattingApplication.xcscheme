@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D17B2391E5703AC00F23918"
-               BuildableName = "ChattingApplication.app"
-               BlueprintName = "ChattingApplication"
-               ReferencedContainer = "container:ChattingApplication.xcodeproj">
+               BlueprintIdentifier = "0811BFD4D74F0F5A04E3FAC35AAE7936"
+               BuildableName = "Pods_ChattingApplication.framework"
+               BlueprintName = "Pods-ChattingApplication"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D17B2391E5703AC00F23918"
-            BuildableName = "ChattingApplication.app"
-            BlueprintName = "ChattingApplication"
-            ReferencedContainer = "container:ChattingApplication.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D17B2391E5703AC00F23918"
-            BuildableName = "ChattingApplication.app"
-            BlueprintName = "ChattingApplication"
-            ReferencedContainer = "container:ChattingApplication.xcodeproj">
+            BlueprintIdentifier = "0811BFD4D74F0F5A04E3FAC35AAE7936"
+            BuildableName = "Pods_ChattingApplication.framework"
+            BlueprintName = "Pods-ChattingApplication"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D17B2391E5703AC00F23918"
-            BuildableName = "ChattingApplication.app"
-            BlueprintName = "ChattingApplication"
-            ReferencedContainer = "container:ChattingApplication.xcodeproj">
+            BlueprintIdentifier = "0811BFD4D74F0F5A04E3FAC35AAE7936"
+            BuildableName = "Pods_ChattingApplication.framework"
+            BlueprintName = "Pods-ChattingApplication"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
