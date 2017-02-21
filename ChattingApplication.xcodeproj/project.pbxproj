@@ -14,10 +14,11 @@
 		1D17B2461E5703AC00F23918 /* ChattingApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D17B2441E5703AC00F23918 /* ChattingApplication.xcdatamodeld */; };
 		1D17B2481E5703AC00F23918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D17B2471E5703AC00F23918 /* Assets.xcassets */; };
 		1D17B24B1E5703AC00F23918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D17B2491E5703AC00F23918 /* LaunchScreen.storyboard */; };
+		1D269D721E5AAD0600B455C2 /* ReciverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D269D711E5AAD0600B455C2 /* ReciverTableViewCell.swift */; };
+		1D269D741E5AAD1400B455C2 /* SenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D269D731E5AAD1400B455C2 /* SenderTableViewCell.swift */; };
 		1D9D28DE1E572094006F48F2 /* moduleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D28DD1E572094006F48F2 /* moduleClass.swift */; };
 		1D9D28E01E572137006F48F2 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D28DF1E572137006F48F2 /* ChatController.swift */; };
 		1D9D28E61E57287F006F48F2 /* TableViewCell11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D28E51E57287F006F48F2 /* TableViewCell11.swift */; };
-		1DB925D21E58414C00931516 /* ChatTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB925D11E58414C00931516 /* ChatTableController.swift */; };
 		1DB925D41E584ED200931516 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB925D31E584ED200931516 /* Default-568h@2x.png */; };
 		215B719C1E5821BB003F5727 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215B719B1E5821BB003F5727 /* FavoriteViewController.swift */; };
 		F469AD5FC2705093F23F617C /* Pods_ChattingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7EB724406D64D8134DC703 /* Pods_ChattingApplication.framework */; };
@@ -34,10 +35,11 @@
 		1D17B2471E5703AC00F23918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D17B24A1E5703AC00F23918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D17B24C1E5703AC00F23918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D269D711E5AAD0600B455C2 /* ReciverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciverTableViewCell.swift; sourceTree = "<group>"; };
+		1D269D731E5AAD1400B455C2 /* SenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderTableViewCell.swift; sourceTree = "<group>"; };
 		1D9D28DD1E572094006F48F2 /* moduleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moduleClass.swift; sourceTree = "<group>"; };
 		1D9D28DF1E572137006F48F2 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		1D9D28E51E57287F006F48F2 /* TableViewCell11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell11.swift; path = ../TableViewCell11.swift; sourceTree = "<group>"; };
-		1DB925D11E58414C00931516 /* ChatTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableController.swift; sourceTree = "<group>"; };
 		1DB925D31E584ED200931516 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		215B719B1E5821BB003F5727 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		8BFE99D26FB0760A5EFF88E8 /* Pods-ChattingApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattingApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChattingApplication/Pods-ChattingApplication.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,8 +87,9 @@
 				1D03C47A1E57167E00F85695 /* ContactsViewController.swift */,
 				215B719B1E5821BB003F5727 /* FavoriteViewController.swift */,
 				1D9D28DF1E572137006F48F2 /* ChatController.swift */,
-				1DB925D11E58414C00931516 /* ChatTableController.swift */,
 				1D17B2411E5703AC00F23918 /* Main.storyboard */,
+				1D269D711E5AAD0600B455C2 /* ReciverTableViewCell.swift */,
+				1D269D731E5AAD1400B455C2 /* SenderTableViewCell.swift */,
 				1D17B2471E5703AC00F23918 /* Assets.xcassets */,
 				1D17B2491E5703AC00F23918 /* LaunchScreen.storyboard */,
 				1D17B24C1E5703AC00F23918 /* Info.plist */,
@@ -236,11 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DB925D21E58414C00931516 /* ChatTableController.swift in Sources */,
 				1D9D28E61E57287F006F48F2 /* TableViewCell11.swift in Sources */,
 				1D9D28E01E572137006F48F2 /* ChatController.swift in Sources */,
 				1D17B2401E5703AC00F23918 /* ViewController.swift in Sources */,
+				1D269D721E5AAD0600B455C2 /* ReciverTableViewCell.swift in Sources */,
 				215B719C1E5821BB003F5727 /* FavoriteViewController.swift in Sources */,
+				1D269D741E5AAD1400B455C2 /* SenderTableViewCell.swift in Sources */,
 				1D03C47B1E57167E00F85695 /* ContactsViewController.swift in Sources */,
 				1D9D28DE1E572094006F48F2 /* moduleClass.swift in Sources */,
 				1D17B23E1E5703AC00F23918 /* AppDelegate.swift in Sources */,

@@ -1,3 +1,5 @@
+
+
 //
 //  TableViewCell11.swift
 //  
@@ -27,7 +29,7 @@ class TableViewCell11: UITableViewCell {
     fileprivate func updateUI()
     {
         
-        imageF.kf.setImage(with:Data?.Image)
+        imageF.kf.setImage(with: URL(string: (Data?.Image)!))
         chatLabel?.text = Data?.chatD
         nameLabel?.text = Data?.name
         timeLabel?.text =  Data?.time

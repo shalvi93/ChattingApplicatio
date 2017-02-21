@@ -23,77 +23,83 @@ class ViewController: UIViewController,CNContactPickerDelegate
     var sectedIndex:Int = -1
     
     var contactsDetails = [Details(name:"vani mehak",
-                                   chatD:"hi how are you?  where are you?",
-                                   Image:URL(string:"http://www.gulte.com/content/2016/10/news/1477004619-146.jpg"),time:"6:00 AM"),
+                                   chatD:"hi how are you?  where are you? what is Temporary exceptions",
+                                   Image:"https://1.bp.blogspot.com/-gI3iXeJeMgk/V2x7RfNc1cI/AAAAAAAAATQ/qDS9Ml5o-_sljum6bCFL2Jz0xqlceWRnwCLcB/s1600/funny-frofile-pictures-and-dp-2-300x300.jpg",time:"6:46 AM"),
                            Details(name:" varun sharma",
-                                   chatD: "<3 Cheese . Mayo . Garlic",
-                                   Image:URL(string:"https://1.bp.blogspot.com/-gI3iXeJeMgk/V2x7RfNc1cI/AAAAAAAAATQ/qDS9Ml5o-_sljum6bCFL2Jz0xqlceWRnwCLcB/s1600/funny-frofile-pictures-and-dp-2-300x300.jpg"),time:"6:00 AM"),
+                                   chatD: "<3 Cheese.Mayo.Garlic yea i love it",
+                                   Image:"https://1.bp.blogspot.com/-gI3iXeJeMgk/V2x7RfNc1cI/AAAAAAAAATQ/qDS9Ml5o-_sljum6bCFL2Jz0xqlceWRnwCLcB/s1600/funny-frofile-pictures-and-dp-2-300x300.jpg",time:"3:00 PM"),
                            Details(name:"sankalp vats",
-                                   chatD:"CheGarlic",
-                                   Image:URL(string:"http://www.funn4u.com/wp-content/uploads/2016/08/facebook-girls-new-dp-20.png"),time:"6:40 AM"),
+                                   chatD:"CheGarlic mage referenced from a nib in the bundle ",
+                                   Image:"http://www.funn4u.com/wp-content/uploads/2016/08/facebook-girls-new-dp-20.png",time:"6:40 AM"),
                            Details(name:"MusAlfredo :)",
-                                   chatD:"shalvi",
-                                   Image:URL(string:"http://coolstatus.co/wp-content/uploads/2014/09/Cool-Dp.jpg"),time:"8:00 AM"),
+                                   chatD:" her name is shalvi sharma",
+                                   Image:"http://coolstatus.co/wp-content/uploads/2014/09/Cool-Dp.jpg",time:"8:30 AM"),
                            Details(name:"Musdo",
-                                   chatD:"shalvi jai",
-                                   Image:URL(string:"http://s3.favim.com/orig/150211/couple-cute-dp-funny-face-Favim.com-2469222.jpg"),time:"7:00 PM"),
+                                   chatD:"shalvi jai  fetching results for container",
+                                   Image:"http://s3.favim.com/orig/150211/couple-cute-dp-funny-face-Favim.com-2469222.jpg",time:"1:00 PM"),
                            Details(name:" Alfredo",
-                                   chatD:" Alfredo",
-                                   Image:URL(string:"http://www.trickscity.com/wp-content/uploads/2016/07/Facebook-dp-and-covers-girls-boys-punjabi-girls-sexy-smoking-covers-sad-dp-263.jpg"),time:"6:00 AM"),
+                                   chatD:"yea! i did ymbolic breakpoint at UIViewAlertForUnsatisfiableAlfredo",
+                                   Image:"http://www.trickscity.com/wp-content/uploads/2016/07/Facebook-dp-and-covers-girls-boys-punjabi-girls-sexy-smoking-covers-sad-dp-263.jpg",time:"2:00 AM"),
                            Details(name:"Mushroom...Cajun . Alfredo",
-                                   chatD:"vabhav kumar ",
-                                   Image:URL(string:"https://www.statuswhatsapp.co.in/wp-content/uploads/2016/02/BuguJRd.jpg"),time:"7:10 AM")
+                                   chatD:"what abot Mr vabhav kumar ",
+                                   Image:"https://www.statuswhatsapp.co.in/wp-content/uploads/2016/02/BuguJRd.jpg",time:"7:10 AM")
+    ]
+    var arrayOfImages = [
+    "http://www.gulte.com/content/2016/10/news/1477004619-146.jpg",
+    "http://www.gulte.com/content/2016/10/news/1477004619-146.jpg",
+    "http://www.gulte.com/content/2016/10/news/1477004619-146.jpg",
+    "http://www.gulte.com/content/2016/10/news/1477004619-146.jpg",
+    "http://www.gulte.com/content/2016/10/news/1477004619-146.jpg",
+    "http://www.gulte.com/content/2016/10/news/1477004619-146.jpg"
     ]
     
     
     
+    let contacts: [CNContact] = {
+        let contactStore = CNContactStore()
+        let keysToFetch = [
+            CNContactFormatter.descriptorForRequiredKeys(for: .fullName),
+            CNContactEmailAddressesKey,
+            CNContactPhoneNumbersKey,
+            CNContactImageDataAvailableKey,
+            CNContactThumbnailImageDataKey] as [Any]
+        
+        // Get all the containers
+        var allContainers: [CNContainer] = []
+        do {
+            allContainers = try contactStore.containers(matching: nil)
+        } catch {
+            print("Error fetching containers")
+        }
+        
+        var results: [CNContact] = []
+        
+        // Iterate all containers and append their contacts to our results array
+        for container in allContainers {
+            let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
+            
+            do {
+                let containerResults = try contactStore.unifiedContacts(matching: fetchPredicate, keysToFetch: keysToFetch as! [CNKeyDescriptor])
+                results.append(contentsOf: containerResults)
+            } catch {
+                print("Error fetching results for container")
+            }
+        }
+        
+        return results
+    }()
+
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
-        let contacts: [CNContact] = {
-            let contactStore = CNContactStore()
-            let keysToFetch = [
-                CNContactFormatter.descriptorForRequiredKeys(for: .fullName),
-                CNContactEmailAddressesKey,
-                CNContactPhoneNumbersKey,
-                CNContactImageDataAvailableKey,
-                CNContactThumbnailImageDataKey] as [Any]
-            
-            // Get all the containers
-            var allContainers: [CNContainer] = []
-            do {
-                allContainers = try contactStore.containers(matching: nil)
-            } catch {
-                print("Error fetching containers")
-            }
-            
-            var results: [CNContact] = []
-            
-            // Iterate all containers and append their contacts to our results array
-            for container in allContainers {
-                let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
-                
-                do {
-                    let containerResults = try contactStore.unifiedContacts(matching: fetchPredicate, keysToFetch: keysToFetch as! [CNKeyDescriptor])
-                    results.append(contentsOf: containerResults)
-                } catch {
-                    print("Error fetching results for container")
-                }
-            }
-            
-            return results
-        }()
-        
-        var contact: [contactsDetails] = []
+                var contact: [Details] = []
         contacts.enumerated().forEach{ index,cont in
-            contact.append((contactsDetails), name:"",
-                           chatD:"",
-                           Image:URL(string:"") )
+//            contact.append(Details(name: cont.givenName, chatD:"", Image: URL(string:"(arrayOfImages[index])"), time: ""))
         }
-        //print("Name",cont.givenName)
-        
-        contactsDetails.append(contact)
+      
+      // contactsDetails.append(contact)
+    
     }
     
 
